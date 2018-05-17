@@ -14,7 +14,7 @@ if [ -d /xmrig-scaligero/pools ];
 	then
     	echo "XNRIG-SCALIGERO ALREADY EXIST"
     	cd /xmrig-scaligero
-    	sudo rm -R pools/
+    	sudo rm -R pools
     	sudo mkdir pools
 		cd pools
 		sudo wget https://raw.githubusercontent.com/xmrig-scaligero/xmrig-scaligero/master/xmr.json

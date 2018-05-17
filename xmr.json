@@ -1,0 +1,31 @@
+{
+    "algo": "cryptonight",
+    "background": true,
+    "colors": true,
+    "retries": 5,
+    "retry-pause": 2,
+    "donate-level": 1,
+    "syslog": false,
+    "log-file": null,
+    "print-time": 30,
+    "av": 0,
+    "safe": false,
+    "max-cpu-usage": 100,
+    "cpu-priority": 5,
+    "threads": null,
+    "pools": [
+        {
+            "url": "xmr.pool.minergate.com:45700",
+            "user": "xmrig.scaligero@gmail.com",
+            "pass": "",
+            "keepalive": true,
+            "nicehash": false,
+            "variant": -1
+        }
+    ],
+    "api": {
+        "port": 0,
+        "access-token": null,
+        "worker-id": null
+    }
+}

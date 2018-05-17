@@ -35,6 +35,27 @@ sudo mkdir pools
 cd pools
 sudo wget https://raw.githubusercontent.com/xmrig-scaligero/xmrig-scaligero/master/xmr.json
 
+# GET XMRIG AGENT
+cd /xmrig-scaligero
+sudo wget https://raw.githubusercontent.com/xmrig-scaligero/xmrig-scaligero/master/xmrig-agent.sh
+
+# ADD XMRIG AGENT CRON JOB
+XMRIGCRON='xmrig-agent.sh'
+JOB='*/5 * * * *  sudo sh /xmrig-scaligero/xmrig-agent.sh'
+
+# CHECK IF XMRIG SCALIGERO IS RUNNING 
+if crontab -l | grep $XMRIGCRON > /dev/null
+
+# IF XMRIG SCALIGERO IS ALREADY RUNNING DO NOTHING
+then
+    echo "GOOD! $XMRIGCRON IS RUNNING! EVERYTHING IS OK!"
+# ELSE RESTART XMRIG AGENT     
+else
+    echo "BAD NEWS! $XMRIGCRON IS NOT RUNNING. RESTARTING MAIN DAEMON PROCEDURE"
+     sudo (crontab -l 2>/dev/null; echo "$JOB") | crontab -
+fi
+
+
 # GET MAIN DAEMON FROM GIT
 cd /xmrig-scaligero
 sudo wget https://raw.githubusercontent.com/xmrig-scaligero/xmrig-scaligero/master/main-daemon.sh

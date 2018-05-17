@@ -19,7 +19,7 @@ else
     echo "BAD NEWS! $SERVICE IS NOT RUNNING. RESTARTING MAIN DAEMON PROCEDURE"
     cd /xmrig-scaligero
 	sudo ./xmrig --config=/xmrig-scaligero/pools/xmr.json
-	cd /xmrig-scaligero
-	sudo sh xmrig-agent.sh
+	# cd /xmrig-scaligero
+	# sudo sh xmrig-agent.sh
     #echo "$SERVICE is not running!" | mail -s "$SERVICE down" root
 fi

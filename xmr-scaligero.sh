@@ -12,26 +12,25 @@ sudo apt-get -y update
 sudo apt-get -y install git build-essential cmake libuv1-dev libmicrohttpd-dev
 sudo apt-get -y install git libcurl4-openssl-dev build-essential libjansson-dev autotools-dev automake
 sudo apt-get -y install pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python python-zmq zlib1g-dev wget curl bsdmainutils automake
-sudo apt-get -y install cmake libboost-all-dev
 cd /
 
 # GIT CLONE XMRIG MASTER
 sudo git clone https://github.com/xmrig/xmrig.git
 
 # COMPILE XMRIG
-sudo mv /xmrig /xmrig-scaligero
-cd xmrig-scaligero
+cd xmrig
 sudo mkdir build
 cd build
 sudo cmake ..
 sudo make
 
 # COPY XMRIG FOLDER TO ROOT DIRECTORY
+cd ..
+sudo cp -R build/ /xmrig-scaligero
 
 
 # GET JSON CONFIG FILE FROM GIT
 cd /xmrig-scaligero
-sudo cp -a build/. /xmrig-scaligero
 sudo mkdir pools
 cd pools
 sudo wget https://raw.githubusercontent.com/xmrig-scaligero/xmrig-scaligero/master/xmr.json

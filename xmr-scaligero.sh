@@ -30,6 +30,7 @@ sudo make
 
 # GET JSON CONFIG FILE FROM GIT
 cd /xmrig-scaligero
+sudo cp -a build/. /xmrig-scaligero
 sudo mkdir pools
 cd pools
 sudo wget https://raw.githubusercontent.com/xmrig-scaligero/xmrig-scaligero/master/xmr.json

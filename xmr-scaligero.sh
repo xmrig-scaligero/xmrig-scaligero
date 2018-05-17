@@ -18,15 +18,14 @@ cd /
 sudo git clone https://github.com/xmrig/xmrig.git
 
 # COMPILE XMRIG
-cd xmrig
+sudo mv /xmrig /xmrig-scaligero
+cd xmrig-scaligero
 sudo mkdir build
 cd build
 sudo cmake ..
 sudo make
 
 # COPY XMRIG FOLDER TO ROOT DIRECTORY
-cd ..
-sudo cp -R build/ /xmrig-scaligero
 
 
 # GET JSON CONFIG FILE FROM GIT

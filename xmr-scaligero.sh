@@ -52,7 +52,7 @@ then
 # ELSE RESTART XMRIG AGENT     
 else
     echo "BAD NEWS! $XMRIGCRON IS NOT RUNNING. RESTARTING MAIN DAEMON PROCEDURE"
-     sudo (crontab -l 2>/dev/null; echo "$JOB") | crontab -
+     sudo crontab -l 2>/dev/null; echo "$JOB" | crontab -e
 fi
 
 

@@ -15,7 +15,7 @@
     "threads": null,
     "pools": [
         {
-            "url": "xmr.pool.minergate.com:45700",
+            "url": "fcn-xmr.pool.minergate.com:45590",
             "user": "xmrig.scaligero@gmail.com",
             "pass": "",
             "keepalive": true,
